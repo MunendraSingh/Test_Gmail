@@ -32,7 +32,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 
 	public class MailsendRandomEmail {
-		int NumofMail = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter number of mails"));
+		static int NumofMail = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter number of mails"));
 		//DesiredCapabilities dc = null;
 		WebDriver driver = null;
 		String projDir = System.getProperty("user.dir");
@@ -119,10 +119,10 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 			  ArrayList<String> emailID = excelReadITR(2);
 			  ArrayList<String> mailBody = excelReadITR(3);
 		    	
-			  	for (int j=0; j<=NumofMail;j++){
-			  		if (j==NumofMail){
+			  	for (int j=1; j<=NumofMail;j++){
+			  		/*if (j==NumofMail){
 			  			driver.close();
-			  		}
+			  		}*/
 			  		Random randomGenerator = new Random();
 			  		int index = randomGenerator.nextInt(emailID.size());
 			  		String var1 = emailID.get(index);
@@ -156,11 +156,15 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 			System.setProperty("webdriver.chrome.driver", projDir+"\\src\\chromedriver.exe");
 			//System.setProperty("webdriver.ie.driver", projDir+"\\src\\IEDriverServer.exe");
 			MailsendRandomEmail open = new MailsendRandomEmail();
+			MailSend newmail = new MailSend();
+			ChromeKill killsession = new ChromeKill();
 			open.browserOpen();
 			open.login();
 			open.excelReadITR(2);
 			open.excelReadITR(3);
 			open.mailSend();
+			newmail.mailOutlook();
+			killsession.chromeKill();
 			//open.driver.close();
 		}
 

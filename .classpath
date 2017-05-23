@@ -41,5 +41,8 @@
 	<classpathentry kind="lib" path="C:/Users/ASUS/Desktop/selenium_set up files/poi-3.16/poi-3.16.jar"/>
 	<classpathentry kind="lib" path="C:/Users/ASUS/Desktop/selenium_set up files/poi-3.16/poi-ooxml-3.16.jar"/>
 	<classpathentry kind="lib" path="C:/Users/ASUS/Desktop/selenium_set up files/poi-3.16/poi-ooxml-schemas-3.16.jar"/>
+	<classpathentry kind="lib" path="D:/J2EE/workspace/javamail-1.4.7/mail.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ASUS/Desktop/activation-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ASUS/Desktop/javax.mail-1.5.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
